@@ -1,3 +1,6 @@
+// Prevents certain actions from being taken and throws more exceptions.
+'use strict';
+
 import Brew from "./core/brew.js";
 
 /** @type Brew */
