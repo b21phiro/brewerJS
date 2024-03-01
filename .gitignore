@@ -1,0 +1,8 @@
+# IDE
+/.idea/
+
+# Folders
+/server/
+
+# Vendors
+/node_modules/
