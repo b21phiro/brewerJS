@@ -9,13 +9,16 @@ export default class Brew {
     /** @type string */
     canvasElementID = "";
 
-    /** @type HTMLElement */
+    /** @type HTMLElement<canvas> */
     canvasElement = null;
 
     /** @type Number */
     canvasWidth = 720;
     /** @type Number */
     canvasHeight = 540;
+
+    /** @type WebGL2RenderingContext */
+    canvasContext = null;
 
     /**
      * @param rootElement { HTMLElement }
@@ -39,6 +42,9 @@ export default class Brew {
             : this.canvasElementIDDefault;
         this.canvasElement.id = canvasElementID;
 
+        // Sets the context to be of webgl2.
+        this.canvasContext = this.canvasElement.getContext('webgl2');
+
         // Sets the width and height of the canvas.
         this.canvasElement.width = this.canvasWidth;
         this.canvasElement.height = this.canvasHeight;
@@ -49,8 +55,11 @@ export default class Brew {
               rootElement.children.lastChild
             );
         }
+
         // Mounts the canvas onto given root-element.
         rootElement.insertAdjacentElement('afterbegin', this.canvasElement);
+
+        // ... Ready!
 
     }
 
