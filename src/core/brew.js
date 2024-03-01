@@ -49,6 +49,7 @@ export default class Brew {
               rootElement.children.lastChild
             );
         }
+        // Mounts the canvas onto given root-element.
         rootElement.insertAdjacentElement('afterbegin', this.canvasElement);
 
     }
