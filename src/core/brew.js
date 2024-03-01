@@ -12,7 +12,9 @@ export default class Brew {
     /** @type HTMLElement */
     canvasElement = null;
 
+    /** @type Number */
     canvasWidth = 720;
+    /** @type Number */
     canvasHeight = 540;
 
     /**
