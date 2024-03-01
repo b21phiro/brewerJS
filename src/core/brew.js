@@ -12,6 +12,9 @@ export default class Brew {
     /** @type HTMLElement */
     canvasElement = null;
 
+    canvasWidth = 720;
+    canvasHeight = 540;
+
     /**
      * @param rootElement { HTMLElement }
      * @param canvasElementID { string }
@@ -33,6 +36,10 @@ export default class Brew {
             ? canvasElementID
             : this.canvasElementIDDefault;
         this.canvasElement.id = canvasElementID;
+
+        // Sets the width and height of the canvas.
+        this.canvasElement.width = this.canvasWidth;
+        this.canvasElement.height = this.canvasHeight;
 
         // Clear the root element upon mounting.
         while(rootElement.children.firstChild) {
