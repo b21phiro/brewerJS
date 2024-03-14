@@ -27,6 +27,7 @@ export default class Brew {
         }
 
         // Ready!
+        window.onload = this.onReady();
 
     }
 
@@ -46,6 +47,18 @@ export default class Brew {
         this.canvasElement = element;
 
         this.canvasContext = element.getContext('webgl2');
+
+    }
+
+    getCanvas() {
+        return this.canvasElement;
+    }
+
+    getContext() {
+        return this.canvasContext;
+    }
+
+    onReady() {
 
     }
 
